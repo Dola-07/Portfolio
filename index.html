@@ -3,41 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nowshin Tabassum Dola - Sliding Book Background</title>
+  <title>Nowshin Tabassum Dola</title>
   <style>
     * {
       margin: 0; padding: 0; box-sizing: border-box;
     }
     html, body {
       height: 100%;
-      overflow: hidden;
       font-family: Arial, sans-serif;
-    }
-
-    .background {
-      position: fixed;
-      top: 0; left: 0;
-      width: 400vw; 
-      height: 100vh;
-      display: flex;
-      z-index: -1;
-      animation: slideRight 40s linear infinite;
-    }
-
-    .background img {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-
-    @keyframes slideRight {
-      0% {
-        transform: translateX(-200vw);
-      }
-      100% {
-        transform: translateX(0);
-      }
+      background-color: #f0f4f8;
     }
 
     header {
@@ -46,8 +20,6 @@
       text-align: center;
       color: white;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      position: relative;
-      z-index: 10;
     }
 
     header h1 {
@@ -82,8 +54,6 @@
       grid-template-columns: 1fr;
       gap: 20px;
       color: black;
-      position: relative;
-      z-index: 10;
     }
 
     section {
@@ -94,12 +64,10 @@
     }
 
     footer {
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: rgba(0, 64, 128, 0.85);
       color: white;
       text-align: center;
       padding: 1em;
-      position: relative;
-      z-index: 10;
     }
 
     @media (max-width: 600px) {
@@ -111,14 +79,6 @@
   </style>
 </head>
 <body>
-
-  
-  <div class="background">
-    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1920&q=80" alt="Books 1" />
-    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1920&q=80" alt="Books 2" />
-    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1920&q=80" alt="Books 1 duplicate" />
-    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1920&q=80" alt="Books 2 duplicate" />
-  </div>
 
   <header>
     <h1>Nowshin Tabassum Dola</h1>
