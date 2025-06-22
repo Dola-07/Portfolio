@@ -3,58 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nowshin Tabassum Dola</title>
+  <title>Nowshin Tabassum Dola - Sliding Book Background</title>
   <style>
-    body {
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      overflow: hidden;
       font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      line-height: 1.6;
-      background-color: #f9f9f9;
     }
+
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 400vw; 
+      height: 100vh;
+      display: flex;
+      z-index: -1;
+      animation: slideRight 40s linear infinite;
+    }
+
+    .background img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    @keyframes slideRight {
+      0% {
+        transform: translateX(-200vw);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
     header {
-      background-color: #004080;
-      color: white;
-      padding: 1em 0;
+      background-color: rgba(0, 64, 128, 0.85);
+      padding: 2.5em 1em;
       text-align: center;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 10;
     }
-    header h1 { margin: 0.2em 0; }
+
+    header h1 {
+      font-size: 2.8em;
+    }
+
     nav {
-      margin-top: 0.5em;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 1em;
+      flex-wrap: wrap;
     }
+
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 10px;
       font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 6px;
+      background-color: rgba(255, 255, 255, 0.15);
+      transition: background 0.3s;
     }
-    nav a:hover { text-decoration: underline; }
-    main { padding: 20px; }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.35);
+    }
+
+    main {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      color: black;
+      position: relative;
+      z-index: 10;
+    }
+
     section {
-      margin-bottom: 20px;
-      background: white;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
     }
+
     footer {
-      background-color: #eee;
-      color: #333;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
       text-align: center;
       padding: 1em;
-      margin-top: 30px;
+      position: relative;
+      z-index: 10;
     }
+
     @media (max-width: 600px) {
-      nav {
-        display: flex;
-        flex-direction: column;
-      }
-      nav a {
-        margin: 5px 0;
-      }
+      header h1 { font-size: 2em; }
+      nav { flex-direction: column; gap: 10px; }
+      main { padding: 10px; }
+      section { padding: 15px; }
     }
   </style>
 </head>
 <body>
+
+  
+  <div class="background">
+    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1920&q=80" alt="Books 1" />
+    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1920&q=80" alt="Books 2" />
+    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1920&q=80" alt="Books 1 duplicate" />
+    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1920&q=80" alt="Books 2 duplicate" />
+  </div>
+
   <header>
     <h1>Nowshin Tabassum Dola</h1>
     <nav>
@@ -63,6 +128,7 @@
       <a href="skills.html">Skills</a>
     </nav>
   </header>
+
   <main>
     <section>
       <h2>Welcome!</h2>
@@ -73,8 +139,10 @@
       <p>Driven by curiosity and learning, I have developed a strong interest in problem-solving, web development, and algorithmic thinking. I have solved over 300 competitive programming problems and participated in multiple onsite contests.</p>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 Nowshin Tabassum Dola</p>
   </footer>
+
 </body>
 </html>
